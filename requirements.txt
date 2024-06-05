@@ -1,0 +1,6 @@
+# Function dependencies, for example:
+# package>=version
+gspread==6.1.2
+yfinance==0.2.40
+
+
