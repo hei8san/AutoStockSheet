@@ -10,7 +10,8 @@ class DataManger:
         # dict_gid is {'Name of Sheet': 'ID of sheet'}
         # ID of sheet is the last part of URL of sheet 
     def to_spreadsheet(self, ticker):
-        client = gc.service_account(filename='./sheet-yfinance-per-graph-cca9c444edb4.json')
+        client = gc.service_account(filename='Relative Path')
+        # Relative path to the JSON file generated from the service account key
         wb_1 = client.open('WB1')
         sheet = wb_1.get_worksheet_by_id(self.dict_gid[ticker])
         # dd/mm/YY
