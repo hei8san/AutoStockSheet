@@ -7,7 +7,8 @@ class DataManger:
     def __init__(self, data: dict) -> None:
         self.data = data
         self.dict_gid = {"NVDA": 228254102, "TPR": 1833218885, "MSFT": 168617616, "QQQ": 600061735, "^GSPC": 36600606, "GS": 821506004, "GOOG": 2116979974, "AMZN": 1678571736, "LLY": 1757361579 }
-
+        # dict_gid is {'Name of Sheet': 'ID of sheet'}
+        # ID of sheet is the last part of URL of sheet 
     def to_spreadsheet(self, ticker):
         client = gc.service_account(filename='./sheet-yfinance-per-graph-cca9c444edb4.json')
         wb_1 = client.open('WB1')
