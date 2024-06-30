@@ -34,8 +34,8 @@ def hello_pubsub(event, context):
     except UnicodeDecodeError as e:
         print(f"Unicode Decode Error: {str(e)} - The decoded data might not be in UTF-8 format.")
     
-    lst_stocks = ["NVDA", "TPR", "MSFT", "GS", "GOOG", "AMZN", "LLY"]
-    for stock in lst_stocks:
+    lst_stocks = ["NVDA"]
+    # lst_stocks corresponds to the key of dict_gid in the DataManger class.  
         try:
             dict_data = retrieve_data(stock)
             obj_dataManagement = DataManger(dict_data)
